@@ -633,6 +633,7 @@ a:hover {
     border: 1px solid #d1d1d1;
     text-align: center;
     padding-bottom: 2rem;
+    margin: 1rem 0;
 }
 
 .Features .Feature .Feature-image {
