@@ -36,6 +36,86 @@ a:hover {
     text-decoration: none;
 }
 
+/* Main-Title */
+
+.Main-Title {
+    border: 2px solid #000;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: var(--main-transition);
+}
+
+.Main-Title:hover {
+    color: #fff;
+    border: 2px solid #fff;
+    transition-delay: .4s;
+}
+
+.Main-Title::before,
+.Main-Title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+
+.Main-Title::before {
+    left: -30px;
+}
+
+.Main-Title::after {
+    right: -30px;
+}
+
+@keyframes left-move {
+    50% {
+        left: 0px;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        left: 0;
+        width: 51%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+@keyframes right-move {
+    50% {
+        right: 0px;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        right: 0;
+        width: 51%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.Main-Title:hover::before {
+    z-index: -1;
+    animation: left-move .4s linear forwards;
+}
+
+.Main-Title:hover::after {
+    z-index: -1;
+    animation: right-move .4s linear forwards;
+}
+
+/* Main-Title */
+
 /* Start Section 1 */
 .Header {
     background-color: #fff;
@@ -291,17 +371,17 @@ a:hover {
     position: absolute;
     bottom: 30px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,0px);
     transition: var(--main-transition);
     animation: up-and-down-arrow 1.8s linear infinite;
 }
 
 @keyframes up-and-down-arrow {
     0%,10%,20%,50%,80%,100% {
-        transform: translateY(0);
+        transform: translate(-50%,0px);
     }
     40%,60% {
-        transform: translateY(-15px);
+        transform: translate(-50%,-15px);
     }
 }
 
@@ -389,30 +469,87 @@ a:hover {
 
 /* Start Section 3 */
 
-.Articles {
-    background-color: seagreen;
-    height: 800px;
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    margin-bottom: 1rem;
 }
 
+.Articles .row {
+    margin-bottom: 3rem;
+}
 
+.Articles .row .Article {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ddd ;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform var(--main-transition);
+    margin: 1rem 0;
+}
 
+.Articles .row .Article:hover {
+    transform: translateY(-15px);
+}
 
+.Articles .row .Article .Article-image img {
+    width: 100%;
+}
 
+.Articles .row .Article .Article-info {
+    padding: 1rem;
+}
 
+.Articles .row .Article .Article-info h5 {
+    font-weight: bold;
+}
 
+.Articles .row .Article .Article-info p {
+    margin: 0;
+    color: #777;
+}
 
+.Articles .row .Article .Article-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-weight: bold;
+    border-top: 1px solid #e9e6e6;
+}
 
+.Articles .row .Article .Article-more a {
+    color: var(--main-color);
+}
 
+.Articles .row .Article .Article-more i {
+    color: var(--main-color);
+    position: relative;
+}
 
+@keyframes up-down {
+    0% {
+        left: 0px;
+    }
 
+    50% {
+        left: 8px;
+    }
 
+    100% {
+        left: 0px;
+    }
+}
 
-
-
-
-
+.Articles .row .Article:hover .Article-more i{
+    animation: up-down .5s linear infinite;
+}
 
 /* End Section 3 */
+
+
 
 /* Start Section 4 */
 .Gallery {
@@ -420,6 +557,16 @@ a:hover {
     height: 800px;
 }
 /* End Section 4 */
+
+
+
+
+
+
+
+
+
+
 
 /* Start Section 5 */
 .Features {
