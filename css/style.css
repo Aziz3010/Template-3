@@ -3,6 +3,7 @@
     --body-bg-color: #f1f1f1;
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
+    --section-background:#ececec;
     --main-transition: .4s;
 }
 
@@ -549,31 +550,312 @@ a:hover {
 
 /* End Section 3 */
 
-
-
 /* Start Section 4 */
+
 .Gallery {
-    background-color: lime;
-    height: 800px;
+    background-color: var(--section-background);
+    padding-bottom: 3rem;
 }
+
+.Gallery .Gallery-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem 3rem 1rem;
+}
+
+.Gallery .Gallery-item {
+    margin: 1rem 0;
+    padding: 15px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%) ;
+    position: relative;
+}
+
+.Gallery .Gallery-item::before {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    z-index: 3;
+}
+
+.Gallery .Gallery-item .item-image {
+    overflow: hidden;
+}
+
+.Gallery .Gallery-item .item-image img {
+    width: 100%;
+    transition: transform var(--main-transition);
+}
+
+.Gallery .Gallery-item:hover img{
+    transform: rotate(3deg) scale(1.1) ;
+}
+
+.Gallery .Gallery-item:hover::before {
+    animation: flash .5s;
+}
+
+@keyframes flash {
+    0%,40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        width: 110%;
+        height: 110%;
+    }
+}
+
 /* End Section 4 */
-
-
-
-
-
-
-
-
-
-
 
 /* Start Section 5 */
 .Features {
-    background-color: maroon;
-    height: 800px;
+    padding-bottom: 3rem;    
 }
+
+.Features-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+.Features .container .row .Feature {
+    border: 1px solid #d1d1d1;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.Features .Feature .Feature-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.Features .Feature .Feature-image img {
+    width: 100%;
+}
+
+.Features .container .row :nth-child(1) .Feature .Feature-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(244 64 54 / 60%);
+}
+
+.Features .container .row :nth-child(2) .Feature .Feature-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0 150 136 / 60%);
+}
+
+.Features .container .row :nth-child(3) .Feature .Feature-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(3 169 244 / 60%);
+}
+
+.Features .Feature .Feature-image::after {
+    content: '';
+    position: absolute;
+    top: 70%;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    transform: skewY(-30deg);
+    height: 100%;
+    transition: transform var(--main-transition);
+}
+
+.Features .Feature:hover .Feature-image::after {
+    transform: skewY(30deg);
+}
+
+.Features .Feature .Feature-info {
+    padding: 1.5rem;
+}
+
+.Features .container .row .Feature .Feature-info span {
+    font-size: 35px;
+    font-weight: bold;
+    color: #000;
+    display: block;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.Features .container .row :nth-child(1) .Feature .Feature-info span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 4px;
+    background-color: #f44036;
+}
+
+.Features .container .row :nth-child(2) .Feature .Feature-info span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 4px;
+    background-color: #009688;
+}
+
+.Features .container .row :nth-child(3) .Feature .Feature-info span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 4px;
+    background-color: #03a9f4;
+}
+
+.Features .Feature .Feature-info p {
+    margin: 0 0 1.5rem 0;
+    font-size: 20px;
+    color: #777;
+    line-height: 1.8;
+}
+
+.Features .Feature .Feature-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Features .container .row :nth-child(1) .Feature .Feature-more a {
+    display: block;
+    width: fit-content;
+    border: 3px solid #f44036;
+    padding: 5px 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f44036;
+    position: relative;
+    overflow: hidden;
+    transition: color var(--main-transition);
+}
+
+.Features .container .row :nth-child(2) .Feature .Feature-more a {
+    display: block;
+    width: fit-content;
+    border: 3px solid #009688;
+    padding: 5px 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #009688;
+    position: relative;
+    overflow: hidden;
+    transition: color var(--main-transition);
+}
+
+.Features .container .row :nth-child(3) .Feature .Feature-more a {
+    display: block;
+    width: fit-content;
+    border: 3px solid #03a9f4;
+    padding: 5px 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #03a9f4;
+    position: relative;
+    overflow: hidden;
+    transition: color var(--main-transition);
+}
+
+.Features .container .row :nth-child(1) .Feature .Feature-more a::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: #f44036;
+    z-index: -1;
+    transition: width var(--main-transition);
+}
+
+.Features .container .row :nth-child(2) .Feature .Feature-more a::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: #009688;
+    z-index: -1;
+    transition: width var(--main-transition);
+}
+
+.Features .container .row :nth-child(3) .Feature .Feature-more a::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: #03a9f4;
+    z-index: -1;
+    transition: width var(--main-transition);
+}
+
+.Features .container .row .Feature:hover .Feature-more a::before {
+    width: 110%;
+}
+
+.Features .container .row .Feature:hover .Feature-more a {
+    color: #fff;
+}
+
 /* End Section 5 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Start Section 6 */
 /* End Section 6 */
