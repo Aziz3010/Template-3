@@ -87,6 +87,7 @@ a:hover {
     height: 70px;
     position: relative;
     color: #000;
+    font-size: 18px;
     padding: 0 30px;
     transition: var(--main-transition);
     overflow: hidden;
@@ -119,6 +120,106 @@ a:hover {
 .Header .main-ul > li > a:hover::before {
     left: 0;
 }
+
+/* +++++ Start Mage menu +++++  */
+
+.Header .main-ul .row {
+    background-color: #fff;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 50px);
+    border-bottom: 3px solid var(--main-color);
+    border-top: 1px solid #e9e6e6;
+    padding: 2rem 0;
+    z-index: -1;
+    opacity: 0;
+    transition: top var(--main-transition), opacity var(--main-transition);
+}
+
+.Header .main-ul li:last-child:hover .row {
+    opacity: 1;
+    z-index: 2000;
+    top: 100%;
+}
+
+/* image */
+.Header .main-ul .row .mega-image img {
+    max-width: 100%;
+}
+
+/* mega-menu-ul */
+.Header .main-ul .row .mega-menu-ul {
+    min-width: 190px;
+}
+
+.Header .main-ul .row .mega-menu-ul li {
+    position: relative;
+}
+
+.Header .main-ul .row .mega-menu-ul li:not(:last-child) {
+    border-bottom: 1px solid #e9e6e6;
+}
+
+.Header .main-ul .row .mega-menu-ul li::before {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    z-index: -1;
+    transition: width var(--main-transition);
+}
+
+.Header .main-ul .row .mega-menu-ul li:hover::before {
+    width: 100%;
+}
+
+.Header .main-ul .row .mega-menu-ul li a {
+    color: var(--main-color);
+    padding: 13px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Header .main-ul .row .mega-menu-ul li a i {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 991px) {
+    .Header .main-ul .row .mega-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .Header .main-ul .row {
+        padding: 1rem;
+    }
+
+    .Header .main-ul .row .mega-menu-ul {
+        text-align: left;
+    }
+
+    .Header .main-ul .row .mega-menu-ul li {
+        border-bottom: 1px solid #e9e6e6;
+    }
+
+    #mega-menu-ul-last li:last-child {
+        border-bottom: none;
+    }
+
+    .Header .main-ul .row .mega-menu-ul li a {
+        padding: 8px;
+        font-size: 15px;
+        font-weight: normal;
+    }
+}
+/* +++++ End Mage menu ++++++++ */
 
 /* End Section 1 */
 
@@ -289,7 +390,8 @@ a:hover {
 /* Start Section 3 */
 
 .Articles {
-    background-color: blue;
+    background-color: seagreen;
+    height: 800px;
 }
 
 
@@ -312,27 +414,18 @@ a:hover {
 
 /* End Section 3 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Start Section 4 */
+.Gallery {
+    background-color: lime;
+    height: 800px;
+}
 /* End Section 4 */
 
 /* Start Section 5 */
+.Features {
+    background-color: maroon;
+    height: 800px;
+}
 /* End Section 5 */
 
 /* Start Section 6 */
