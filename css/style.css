@@ -840,26 +840,97 @@ a:hover {
 /* End Section 5 */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Start Section 6 */
+
+.Testimonials {
+    background-color: var(--section-background);
+    padding-bottom: 3rem;
+}
+
+.Testimonials .Testimonials-head {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.Testimonials .Testimonial {
+    background-color: #fff;
+    padding: 20px 15px;
+    border-radius: 8px 0px 8px 8px;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.Testimonials .Testimonial .Testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid var(--section-background);
+    position: absolute;
+    top: -50px;
+    right: -10px;
+}
+
+.Testimonials .Testimonial .Testimonial-image img {
+    width: 100%;
+}
+
+.Testimonials .Testimonial .name-title h5 {
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.Testimonials .Testimonial .name-title span {
+    color: #777;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.Testimonials .Testimonial .rank {
+    margin-bottom: 10px;
+}
+
+.Testimonials .Testimonial .rank i {
+    cursor: pointer;
+}
+
+.Testimonials .Testimonial .rank .filled {
+    color: yellow;
+}
+
+.Testimonials .Testimonial p {
+    color: #777;
+    margin: 0;
+}
+
 /* End Section 6 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Start Section 7 */
 /* End Section 7 */
