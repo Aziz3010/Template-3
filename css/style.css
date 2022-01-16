@@ -124,6 +124,10 @@ a:hover {
     -webkit-shadow: border-box;
     -moz-shadow: border-box;
     box-shadow: 0 0 10px #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 .Header .topNav {
@@ -307,6 +311,7 @@ a:hover {
 /* Start Section 2 */
 
 .Landing-Page {
+    margin-top: 70px;
     position: relative;
     min-height: calc(100vh - 70px);
 }
@@ -1020,6 +1025,31 @@ a:hover {
 .Team-Members .member .member-bottom span {
     font-size: 15px;
     color: #000;
+}
+
+@media screen and (max-width: 767px) {
+    .Team-Members .member {
+        padding-top: 0px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .Team-Members .member .member-top .member-image {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .Team-Members .member .member-bottom {
+        padding: 1rem;
+        text-align: center;        
+    }
+    
+    .Team-Members .member::before {
+        width: 100%;
+    }
+
+    .Team-Members .member:hover.member::after {
+        width: 100%;
+    }
 }
 
 /* End Section 7 */
