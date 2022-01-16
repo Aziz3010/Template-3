@@ -175,6 +175,7 @@ a:hover {
     padding: 0 30px;
     transition: var(--main-transition);
     overflow: hidden;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
@@ -900,7 +901,7 @@ a:hover {
 }
 
 .Testimonials .Testimonial .rank .filled {
-    color: yellow;
+    color: orange;
 }
 
 .Testimonials .Testimonial p {
