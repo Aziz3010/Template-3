@@ -1253,40 +1253,131 @@ a:hover {
 
 /* Start Section 10 */
 
+.How-It-Works {
+    padding-bottom: 3rem;
+    background-color: var(--section-background);
+}
 
+.How-It-Works .How-It-Works-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+}
 
+.How-It-Works .How-It-Works-image {
+    padding: 2rem;
+}
 
+.How-It-Works .How-It-Works-image img {
+    width: 100%;
+}
 
+.How-It-Works .How-It-Works-step {
+    background-color: #fafafa;
+    padding: 1.5rem;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
 
+.How-It-Works .How-It-Works-step::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%, -50%);
+    background-color: #ececec;
+    z-index: -1;
+    transition: width var(--main-transition), height var(--main-transition);
+}
 
+.How-It-Works .How-It-Works-step:hover::before {
+    width: 150%;
+    height: 150%;
+}
 
+.How-It-Works .How-It-Works-step:last-child {
+    margin-bottom: 0rem;
+}
 
+.How-It-Works .How-It-Works-step .step-image {
+    width: 140px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
 
+.How-It-Works .How-It-Works-step .step-image img {
+    width: 100%;
+}
 
+.How-It-Works .How-It-Works-step .step-info {
+    margin-left: 30px;
+}
 
+.How-It-Works .How-It-Works-step .step-info h4 {
+    font-weight: bold;
+}
 
+.How-It-Works .How-It-Works-step .step-info p {
+    color: #777;
+    margin: 0;
+    line-height: 1.4;
+    font-size: 17px;
+}
 
+/* media */
+@media screen and (max-width: 575px) {
+    .How-It-Works .How-It-Works-image {
+        margin-bottom: 2rem;
+    }
 
+    .How-It-Works .How-It-Works-step {
+        justify-content: center;
+        flex-direction: column;
+    }
 
+    .How-It-Works .How-It-Works-step .step-image {
+        width: 80px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
 
-
-
-
-
-
-
-
-
-
-
+    .How-It-Works .How-It-Works-step .step-info {
+        margin-left: 0px;
+        text-align: center;
+    }
+}
 
 /* End Section 10 */
 
-
-
-
-
 /* Start Section 11 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* End Section 11 */
 
 /* Start Section 12 */
