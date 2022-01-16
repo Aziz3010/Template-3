@@ -176,6 +176,7 @@ a:hover {
     transition: var(--main-transition);
     overflow: hidden;
     cursor: pointer;
+    user-select: none;
 }
 
 @media screen and (max-width: 767px) {
