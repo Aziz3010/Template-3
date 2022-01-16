@@ -908,32 +908,145 @@ a:hover {
 
 /* End Section 6 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Start Section 7 */
+
+.Team-Members {
+    padding-bottom: 3rem;
+}
+
+.Team-Members .Team-Members-head {
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.Team-Members .member {
+    position: relative;
+    margin: 1rem 0;
+    padding-top: 60px;
+}
+
+.Team-Members .member::before,
+.Team-Members .member::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0%;
+    right: 0;
+    border-radius: 10px;
+    transition: width var(--main-transition);
+}
+
+.Team-Members .member::before {
+    width: calc(100% - 60px);
+    background-color: #f3f3f3;
+    z-index: -2;
+}
+
+.Team-Members .member::after {
+    width: 0%;
+    background-color: #e4e4e4;
+    z-index: -1;
+}
+
+.Team-Members .member:hover.member::after {
+    width: calc(100% - 60px);
+}
+
+.Team-Members .member .member-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.Team-Members .member .member-top .member-image {
+    display: flex;
+    flex: 5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Team-Members .member .member-top .member-image img {
+    width: 100%;
+    transition: filter var(--main-transition);
+}
+
+.Team-Members .member:hover .member-top .member-image img {
+    filter: grayscale(100%);
+}
+
+.Team-Members .member .member-top .social-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.Team-Members .member .member-top .social-box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.Team-Members .member .member-top .social-box a i {
+    color: #777;
+    transition: color var(--main-transition);
+}
+
+.Team-Members .member .member-top .social-box a:hover i {
+    color: var(--main-color);
+}
+
+.Team-Members .member .member-top .social-box a:nth-child(4):hover i {
+    color: red;
+}
+
+.Team-Members .member .member-bottom {
+    padding: 1rem 0 1rem 90px;
+}
+
+.Team-Members .member .member-bottom h4 {
+    color: var(--main-color);
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.Team-Members .member .member-bottom span {
+    font-size: 15px;
+    color: #000;
+}
+
 /* End Section 7 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Start Section 8 */
 /* End Section 8 */
