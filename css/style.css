@@ -1758,41 +1758,146 @@ a:hover {
 
 /* Start Section 13 */
 
+.Top-Videos {
+    padding-bottom: 3rem;
+}
 
+.Top-Videos .Top-Videos-head {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
 
+.Top-Videos .row {
+    background-color: var(--section-background);
+    justify-content: space-between;
+}
 
+/* .Top-Videos .Video-list {
+    background-color: violet;
+} */
 
+.Top-Videos .Video-list .top {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
 
+.Top-Videos .Video-list .top h6 {
+    margin: 0;
+    font-weight: bold;
+}
 
+.Top-Videos .Video-list .list .vid {
+    background-color: #fff;
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
 
+.Top-Videos .Video-list .list .vid a {
+    display: block;
+    color: #000;
+    margin: 0 0 5px 0;
+    transition: color var(--main-transition);
+}
 
+.Top-Videos .Video-list .list .vid span {
+    color: #777;
+}
 
+.Top-Videos .Video-list .list .vid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #eeeeee9c;
+    transition: opacity var(--main-transition);
+    z-index: -1;
+}
 
+.Top-Videos .Video-list .list .vid:hover::after {
+    opacity: 1;
+}
 
+.Top-Videos .Video-list .list .vid:hover.vid a {
+    color: var(--main-color);
+}
 
+.Top-Videos .vid-side {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
+.Top-Videos .vid-side .top .Video img {
+    width: 100%;
+}
 
+.Top-Videos .vid-side .bottom {
+    background-color: #fff;
+    padding: 1rem;
+}
 
+.Top-Videos .vid-side .bottom p {
+    margin: 0;
+}
 
+/* media */
+@media screen and (max-width: 767px) {
+    .Top-Videos .col-sm-12  {
+        padding: 1rem !important;
+    }
 
+    .Top-Videos .col-lg-3 {
+        order: 2;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .Top-Videos .col-lg-9 {
+        order: 1;
+    }
+}
 
 /* End Section 13 */
 
 /* Start Section 14 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* End Section 14 */
 
 /* Start Section 15 */
