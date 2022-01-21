@@ -4,6 +4,7 @@
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
     --section-background:#ececec;
+    --footer-background:#191919;
     --main-transition: .4s;
 }
 
@@ -1775,10 +1776,6 @@ a:hover {
     justify-content: space-between;
 }
 
-/* .Top-Videos .Video-list {
-    background-color: violet;
-} */
-
 .Top-Videos .Video-list .top {
     background-color: #f4f4f4;
     display: flex;
@@ -1993,4 +1990,20 @@ a:hover {
 /* End Section 16 */
 
 /* Start Section 17 */
+
+Footer {
+    background-color: var(--footer-background);
+    color: #999;
+    padding: 1rem;
+}
+
+Footer .text {
+    text-align: center;
+}
+
+Footer .text p {
+    margin: 0;
+    font-size: 17px;
+}
+
 /* End Section 17 */
