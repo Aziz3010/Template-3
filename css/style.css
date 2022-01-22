@@ -1955,38 +1955,180 @@ a:hover {
 
 /* Start Section 15 */
 
+.Request-A-Discount .discount-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.Request-A-Discount .discount-box .left-side {
+    background-image: url(../img/discount-background1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: calc(100% / 2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+}
 
+.Request-A-Discount .discount-box .left-side::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(23 135 224 / 97%);
+    z-index: -1;
+}
 
+.Request-A-Discount .discount-box .left-side h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 2rem 0 1rem 0;
+}
 
+.Request-A-Discount .discount-box .left-side p {
+    width: 70%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
 
+.Request-A-Discount .discount-box .left-side .img {
+    width: 350px;
+}
 
+.Request-A-Discount .discount-box .left-side .img img {
+    width: 100%;
+} 
 
+.Request-A-Discount .discount-box .right-side {
+    background-color: #fff;
+    width: calc(100% / 2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.Request-A-Discount .discount-box .right-side h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 2rem 0;
+    color: #000;
+}
 
+.Request-A-Discount .discount-box .right-side .form form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.Request-A-Discount .discount-box .right-side .form form input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    padding: 0 0 0 10px ;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #aaa;
+    caret-color: #aaa;
+    background-color: #f9f9f9;
+}
 
+.Request-A-Discount .form form input:focus,
+.Request-A-Discount .form form textarea:focus {
+    outline: none;
+}
 
+.Request-A-Discount .discount-box .right-side .form form textarea {
+    padding: 10px 0 0 10px ;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    resize: none;
+    width: 300px;
+    height: 160px;
+    background-color: #f9f9f9;
+}
 
+.Request-A-Discount .discount-box .right-side .form form button {
+    margin-top: 25px;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: var(--main-color);
+    font-size: 17px;
+    font-weight: bold;
+    transition: background-color var(--main-transition);
+}
 
+.Request-A-Discount .discount-box .right-side .form form button:hover {
+    background-color: var(--main-color-alt);
+}
 
+@media screen and (max-width: 991px) {
+    .Request-A-Discount .discount-box {
+        flex-direction: column;
+    }
 
+    .Request-A-Discount .discount-box .left-side {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
 
+    .Request-A-Discount .discount-box .right-side {
+        width: 100%;
+    }
+}
 
+@media screen and (max-width: 576px) {
+    .Request-A-Discount .discount-box .left-side,
+    .Request-A-Discount .discount-box .right-side {
+        height: 75vh;
+    }
+}
 
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 400px) {
+    .Request-A-Discount .discount-box .left-side .img {
+        width: 250px;
+    }
+}
 
 /* End Section 15 */
 
 /* Start Section 16 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* End Section 16 */
 
 /* Start Section 17 */
@@ -1995,6 +2137,7 @@ Footer {
     background-color: var(--footer-background);
     color: #999;
     padding: 1rem;
+    border-top: 1px solid #444;
 }
 
 Footer .text {
