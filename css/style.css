@@ -1966,7 +1966,7 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: calc(100% / 2);
-    height: 100vh;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2010,7 +2010,7 @@ a:hover {
 .Request-A-Discount .discount-box .right-side {
     background-color: #fff;
     width: calc(100% / 2);
-    height: 100vh;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2089,13 +2089,6 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 576px) {
-    .Request-A-Discount .discount-box .left-side,
-    .Request-A-Discount .discount-box .right-side {
-        height: 75vh;
-    }
-}
-
 @media screen and (max-width: 400px) {
     .Request-A-Discount .discount-box .left-side .img {
         width: 250px;
@@ -2106,28 +2099,150 @@ a:hover {
 
 /* Start Section 16 */
 
+.Contacts {
+    padding: 4rem 0;
+    background-color: var(--footer-background);
+}
 
+/* 1 */
+.Contacts .Contact-box h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}
 
+.Contacts .Contact-box .media {
+    margin: 1.5rem 0;
+}
 
+.Contacts .Contact-box .media .media-box {
+    margin: 0 15px 0 0;
+}
 
+.Contacts .Contact-box .media .media-box:last-child {
+    margin: 0;
+}
 
+.Contacts .Contact-box .media .media-box a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #313131;
+    color: #b9b9b9;
+    font-size: 20px;
+    transition: background-color var(--main-transition) , color var(--main-transition);
+}
 
+.Contacts .Contact-box .media .facebook:hover a {
+    background-color: var(--main-color);
+    color: #fff;
+}
 
+.Contacts .Contact-box .media .twitter:hover a {
+    background-color: var(--main-color-alt);
+    color: #fff;
+}
 
+.Contacts .Contact-box .media .youtube:hover a {
+    background-color: #f44036;
+    color: #fff;
+}
 
+.Contacts .Contact-box p {
+    color: #aaa;
+    margin: 0;
+    line-height: 2;
+}
 
+/* 2 */
+.Contacts .Contact-box ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
 
+.Contacts .Contact-box ul li:last-child {
+    border: none;
+}
 
+.Contacts .Contact-box ul li a {
+    padding: 12px 0 12px 20px ;
+    display: block;
+    color: #e4e4e4;
+    transition: color var(--main-transition) , padding-left var(--main-transition);
+    position: relative;
+}
 
+.Contacts .Contact-box ul li a:hover {
+    color: #eee;
+    padding-left: 40px;
+}
 
+.Contacts .Contact-box ul li a::after {
+    content: "\F101";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    color: var(--main-color);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+    transition: left var(--main-transition) , color var(--main-transition);
+}
 
+.Contacts .Contact-box ul li a:hover::after {
+    left: 20px;
+    color: var(--main-color-alt);
+}
 
+/* 3 */
+.Contacts .Contact-box .box {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 
+.Contacts .Contact-box .box:last-child {
+    margin: 0;
+}
 
+.Contacts .Contact-box .box i {
+    margin-right: 15px;
+    font-size: 25px;
+    color: var(--main-color);
+}
 
+.Contacts .Contact-box .box p {
+    color: #e4e4e4;
+    margin: 0;
+    line-height: 1.7;
+}
 
+/* 4 */
+.Contacts .Contact-box .awards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.Contacts .Contact-box .awards .awards-img {
+    width: 70px;
+    height: 70px;
+    margin: 3px;
+    border: 3px solid #e4e4e4;
+}
 
+.Contacts .Contact-box .awards .awards-img img {
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .Contacts .Contact-box {
+        margin: 1rem;
+    }   
+}
 
 /* End Section 16 */
 
