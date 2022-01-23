@@ -336,7 +336,6 @@ a:hover {
     margin-top: 70px;
     position: relative;
     min-height: calc(100vh - 70px);
-    z-index: -1;
 }
 
 .Landing-Page::before {
